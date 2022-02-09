@@ -1,0 +1,12 @@
+let a=4;
+let b=23;
+let c=5;
+let d=0;
+d=a+b+c;
+console.log("Addition of 3 numbers are = "+ d);
+d=a*b*c;
+console.log("Multiplication of 3 number are = "+d);
+d=a-b-c;
+console.log("Substraction of 3 numbers are = "+d);
+d=a/b/c;
+console.log("Division of 3 numbers are = "+d)
