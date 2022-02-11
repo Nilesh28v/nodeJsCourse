@@ -5,3 +5,6 @@ if (a>=18){
 else{
     console.log("Not Eligible")
 }
+
+const c = a >= 18 ? "You can Vote for Nation" : "Not Eligible";    //Ternary operator
+console.log(c);
