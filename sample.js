@@ -1,1 +1,2 @@
-console.log('Hello world,nodejs');
+
+console.log(2**3)
