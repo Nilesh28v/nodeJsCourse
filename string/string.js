@@ -17,3 +17,7 @@ console.log(typeof b);
 
 const c=parseInt(b);  //type converstion
 console.log(typeof c)
+
+
+const g=new String("nilesh");
+console.log(`${g} is my name`); 
