@@ -1,69 +1,26 @@
-// task='C';
-// switch (task){
-//     case 'a':
-//         console.log('a');
-//         break;
-//     case 'c':
-//         console.log('c');
-//         break;
-//     default:
-//         console.log('default');
+// function calcAddition(marks=100,studentsMark) 
+// { 
+//     if(studentsMark<90){
+//         console.log('Hey you need study more');
+//     }
+//     else{
+//             console.log('chill');
+//     } 
+// return 'ok bye'; 
+//     }
+// console.log(calcAddition(100,55));
+function abc(marks = 55){
 
-// }
+if (marks < 28) {
+    console.log('Failed');
+} else if (marks > 28 && marks < 50){
+    console.log('He is passed with minimum percentage');
+}else if (marks > 50 && marks < 75){
+    console.log('He is passed with good percentage');
+}else {
+    console.log('He is passed with Distiction');
+}
+return '';
+}
 
-// let a=0;
-// for(a;a<5;a++);
-// console.log(a);
-
-
-// console.log(true+true+true*3);
-
-// console.log(NaN===NaN);
-
-// var a=23;
-// {
-//     var a=44;
-//     console.log(a);
-// }
-// console.log(a);
-
-
-// let a=23;
-// {
-//     let a=44;
-//     console.log(a);
-// }
-// console.log(a);
-
-
-
-// let a=123
-// let b='321'
-// let c=a+b;
-// console.log(c);
-
-
-// console.log(0===null);
-
-
-// var a=1;
-// var b=0;
-// while (a<=3)
-// {
-//     a++;
-//     b=b+a*2;
-//     console.log(b);
-// }
-
-
-// console.log(NaN===NaN);
- 
-
-// console.log(undefined===undefined);
-
-// let ab='';
-// console.log(0===null);
-
-// let ab=[];
-// console.log(typeof ab);
-
+console.log(abc());
