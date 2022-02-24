@@ -1,3 +1,17 @@
-const numbers = [1, 2, 3, 4];
-const doubled = numbers.map(item => item * 2);
-console.log(doubled); // [2, 4, 6, 8]
+// a='234';
+// b='456';
+// c=a-b;
+// console.log(c);
+
+// const value=[2,3,4,5]
+// let a=1;
+// for (let j=0;j<=(value.length);j++){
+   
+//     for (let i=1;i<=10;i++){
+//         a=value[j];
+//          a=a*i;
+//         console.log(a);
+
+//     }
+
+// }
