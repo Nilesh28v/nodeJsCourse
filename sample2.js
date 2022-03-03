@@ -1,2 +1,4 @@
-a=21;
-console.log(a);
+nilesh(){
+    var x = 2;
+  }
+console.log(x);

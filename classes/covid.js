@@ -7,8 +7,8 @@ class covid19{
 }
 }
 class deltaVarient extends covid19{
-    constructor(medicine){
-        super(symptoms);
+    constructor(symptoms,medicine){
+        super(symptoms,medicine);
         this.medicine=medicine;
     }
     deltaVarient(){
@@ -18,4 +18,4 @@ class deltaVarient extends covid19{
 // const a=new covid19('high Fiver');
 // console.log(a.covid19());
 const b=new deltaVarient('Remdisiver');
-console.log(b.deltaVarient);
+console.log(b.deltaVarient());

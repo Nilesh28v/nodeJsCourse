@@ -4,5 +4,5 @@ console.log(b);
 
 
 const bjhk=[13,25,345,445,523];
-let kc = bjhk.indexOf(3);
+let kc = bjhk.indexOf(345);
 console.log(kc);
