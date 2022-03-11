@@ -1,0 +1,1 @@
+create table abc(nilesh varchar(2),number int);
