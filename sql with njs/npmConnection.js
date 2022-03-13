@@ -1,8 +1,9 @@
 const sql = require('mssql')
 const sqlConfig = {
-  
-    database: 'nilesh',
-    server: 'localhost',
+    user:'root',
+    password:'root',
+    database:'nilesh',
+    server: 'DESKTOP-QTPHBVV',
     pool: {
         max: 10,
         min: 0,
