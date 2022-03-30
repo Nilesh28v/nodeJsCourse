@@ -8,7 +8,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const mobileRouter =require('./routes/mobileRouter.js');
 const findRouter =require('./routes/mongofind.js');
-// const abcRouter =require('./routes/abcRouter.js');
+const insertRouter =require('./routes/mongoInsert.js');
+var cookieParser = require('cookie-parser');
 
 var app = express();
  
@@ -22,11 +23,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.get('/mobile',mobileRouter);
 app.get('/mongofind',findRouter);
-// app.get('/abc',abcRouter);
+app.post('/insert',insertRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

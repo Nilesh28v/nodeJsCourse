@@ -65,10 +65,26 @@ app.put('/students/:id',(req,res)=>{   //put is used to update
         res.json(std)
     }else{
         res.status(404)
+        res.end()
     }
 
     // const id =req.params.id
     console.log(id);
     res.json(id)
 
+})
+
+
+app.delete("/students/:id",(req,res)=>{
+    let id= req.params.id;
+    const index = students.findIndex((student)=>{
+        return (student.id == Number.parseInt(id))
+})
+if(index>=0){
+    let std = students[index]
+    students.splice(index,1)
+    res.json(std)
+}else{
+    res.status(404)
+}
 })
