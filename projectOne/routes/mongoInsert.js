@@ -16,3 +16,8 @@ router.post('/insert', function(req, res) {
 });
 
 module.exports = router;
+
+
+// {
+//     "data" :{"name":"kjkkkkk", "age": "876"}
+// }

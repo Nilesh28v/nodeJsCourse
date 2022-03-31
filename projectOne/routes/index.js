@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
     userName :'Nilesh',
     role : 'Student'
   }
-  res.cookie('name',cookievalue,{maxAge:10000  } ).send('cookie set'); //Sets name = express
+  res.cookie('name',cookievalue,{maxAge:10000  } ); //Sets name = express
   res.render('index', { title: 'Express' });
 });
 
