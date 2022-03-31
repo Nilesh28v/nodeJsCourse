@@ -10,7 +10,7 @@ const mobileRouter =require('./routes/mobileRouter.js');
 const findRouter =require('./routes/mongofind.js');
 const insertRouter =require('./routes/mongoInsert.js');
 const updateRouter = require('./routes/updateRouter')
-const deleteRouter = require('./routes/updateRouter')
+const deleteRouter = require('./routes/deleteRouter')
 var cookieParser = require('cookie-parser');
 
 
