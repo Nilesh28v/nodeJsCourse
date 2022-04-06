@@ -10,6 +10,14 @@ const mul = (a,b) => {
     return a*b;
 }
 
-exports.add = add;
-exports.sub = sub;
-exports.mul = mul;
+exports.add = add;  //or   module.exports.add=add;
+exports.sub = sub;  //or   module.exports.sub=sub;
+exports.mul = mul;  //or   module.exports.mul=mul;
+
+ 
+
+//meaning of above is
+
+//{add: function}
+//{add: function, sub:function}
+//{add:funcitnn, sub:fucntion, mul: function}
