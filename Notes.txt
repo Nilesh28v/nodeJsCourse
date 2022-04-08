@@ -1,0 +1,82 @@
+1. Promise object represents the eventual completion or failure of an asynchronous operation and itrs resulting value.
+    Promise gives you result or error.
+
+2. API- application programming interfaces  //API,JSOn contracts b/w UI and Backend, Endpoints all same
+    a->  api <-b   //a dont know b's language, api provide endpoints(bridge)
+    //common language that UI and Backend will understand
+    E.g https://api.twitter.com/getTweets    
+
+    API are 2 types- 
+    public:- 
+            publicily exosed and anyone with/without valid credientional can use it 
+            Google Maps API
+            Twitter API
+            Weather API
+            ->we can plug those into our website
+    
+    private/protected:-
+                    we can not access over internet without username/password 
+                    we make for our company
+                   
+
+3.  http://localhost:3000/getusers
+    
+    Endpoint Name-> getusers
+    port :3000  //api is pointing to this port
+    b 
+
+4. Node JS -> server side scripting using javascript
+    express js is a backed framwork(server) and is build top of nodejs
+    -express js makes it easy to coe at high level
+    -Node is like going low level fundamental programming
+
+5.  POSTMAN is used to do API testing
+
+6. CRUD
+    POST = create
+    GET = Read 1 or many
+    PUT = Update
+    Delete= Delete
+
+7.  we collet the data using req.params."variable" 
+
+8. MIDDLEWARE:-(set of function)  
+
+              UI-> Request -> API -> Middleware ->Handler
+
+                1.middleware used to security check of user's token//access/authorization
+                2. body parsing of the request(like it has correct data or not)
+                3. sanitizing data
+                4. logged(this helps in debugg)
+
+            if you want to do all 4 thing to any handler you need to do separte for everyone but insted
+            we use middleware ,before api go to handler it first go to middleware 
+
+9. Express JS:
+                *use the application generator tool, express-generator, to quickly create an application skeleton.
+                * Easily get standard application shell for quick and rapid prototyping   
+
+10. bin -> www -> server root directory
+        ->comiled code
+    pulic folder
+        ->assets
+        ->stylesheets
+        ->scripts
+    routes
+        ->moudles
+            ->we manually created all modules and routes etc.(like user,product files)
+        
+    views
+        ->template files ->UI
+                        ->ejs etc.
+
+    app.js -> the herat of the application
+            ->import your modules
+            ->add the requierd modules and pakages etc
+
+    pakage.json-> all dependecies
+                ->scripts for starting, testing,etc.
+
+11.
+
+    
