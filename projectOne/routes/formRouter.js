@@ -13,7 +13,9 @@ router.post('/postRegDetails', function(req,res,next){
         .input('fname', sql.NVarChar,req.body.fname)
         .input('lname', sql.NVarChar,req.body.lname)
         .input('email', sql.NVarChar,req.body.email)
-        .query(`insert into student values(@fname,@lname,@email)`);
+        .query(`insert into student(fname,lname,email) values(@fname,@lname,@email)`)
+       // .query(`insert into studentfk(id,present) values(( select id from student where email=@email),'2001-02-03')`);//testing
+        
 
     console.dir(result)
     res.redirect('/loginform');

@@ -8,6 +8,7 @@ router.get('/', function(req, res, next) {
     role : 'Student'
     
   };
+
   res.cookie('name',cookievalue,{maxAge:10000  } ); //Sets name = express
   res.render('index', { title: 'Express' });
 });

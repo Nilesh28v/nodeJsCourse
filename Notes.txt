@@ -49,6 +49,15 @@
                 3. sanitizing data
                 4. logged(this helps in debugg)
 
+                {
+                    Middleware functions can perform the following tasks:
+
+                        Execute any code.
+                        Make changes to the request and the response objects.
+                        End the request-response cycle.
+                        Call the next middleware function in the stack.
+                }
+
             if you want to do all 4 thing to any handler you need to do separte for everyone but insted
             we use middleware ,before api go to handler it first go to middleware 
 
@@ -77,6 +86,19 @@
     pakage.json-> all dependecies
                 ->scripts for starting, testing,etc.
 
-11.
+11.   
+What is the default scope of Node.js application? local
 
-    
+12.  Which module is used to serve static files in Node.js?node static
+
+13.   
+What is the use of underscore variable in REPL session?  to get the last result
+
+
+How many Node object methods are available? 18
+
+How to check equality of two nodes?  
+isEqualNode()
+
+
+Node.js uses an event-driven, non-blocking i/o model that makes it lightweight and efficient.
