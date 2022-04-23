@@ -3,8 +3,13 @@ let order =(call_production)=>{
     call_production();
 }
 
-let production =()=>{
-    console.log("order received, stating production");
+// let production =()=>{
+//     console.log("order received, stating production");
 
-};
-order(production);
+// };
+// order(production);   //this is also correct way but lengthy
+
+
+order(()=>{
+    console.log('order received, starting production');
+})

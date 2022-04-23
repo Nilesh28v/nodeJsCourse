@@ -6,9 +6,10 @@ console.log(b);
 b=41;
 console.log(a);
 console.log(b);
-arr2.push(4);
+// arr2.push(4);
 //shallow copy happes for objects,pass by reference
+let arr2=[];
 const arr1=[1,2,3,4];
-let arr2=arr1;
+ arr2=arr1;
 console.log(arr1);
 console.log(arr2);

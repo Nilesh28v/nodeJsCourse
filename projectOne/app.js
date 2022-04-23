@@ -20,7 +20,7 @@ const getRouter = require('./routes/getRouter');
 const loginRouter=require('./routes/loginRouter');
 const authentication=require('./routes/authentication');
 const logout=require('./routes/logout');
-// const attendence=require('./routes/attendence');
+const attendence=require('./routes/attendence');
 const aLoginRouter=require('./routes/adminLogin');
 const authAdminRouter=require('./routes/authAdminRouter');
 const commentRouter = require('./routes/comment');
@@ -61,7 +61,7 @@ app.get('/homePage',authentication);
 app.get('/logout',logout);
 app.post('/updateRecordById',getRouter);
 app.get('/deleteRecord/:id',getRouter);
-// app.get('/updateAttendence',attendence);
+app.get('/updateAttendence',attendence);
 app.get('/admin',aLoginRouter)
 app.post('/authAdmin',authAdminRouter);
 

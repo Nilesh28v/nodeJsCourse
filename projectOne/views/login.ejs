@@ -1,37 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
 	<%- include('./head.ejs') %>
-	<title>Login Form</title>
-  </head>
-  <body>
+		<link rel="stylesheet" href="stylesheets/style.css" type="text/css">
+		<title>Login Form</title>
+</head>
+
+<body>
 	<div class="login">
 		<h1>Student Login</h1>
 		<form action="/auth" method="post">
-			<label for="username">
-				<!-- font awesome icon -->
-				<i class="fas fa-user"></i>
-			</label>
-			<input type="text" name="email" placeholder="email" id="email" required><br>
-			<label for="password">
-				<i class="fas fa-lock"></i>  
-			</label>
-			<input type="password" name="lname" placeholder="lname" id="lname" required><br> <br>
+			<div class="txt_field">
+				<input type="email" name="email" id="email" required>
+				<span></span>
+				<label>Username</label>
+			</div>
+			<div class="txt_field">
+
+				<input type="password" name="lname" id="lname" required>
+				<span></span>
+				<label>Password</label>
+			</div>
 			<input type="submit" value="Login">
 		</form>
-		<% if (errMsg==='success') { %> 
+		<% if (errMsg==='success' ) { %>
 			<h4 style="color:green; font-size:70%;">
-			<p>Voilaa login successful </p>
+				<p>Voilaa login successful </p>
 			</h4>
-		<% } else if(errMsg==='failure'){%>
-			<h4 style="color:red; font-size:70%;"> 
-			<p>yes you forgot again! </p>
-		</h4>
-		<% } %>
-		
-		<a href="getForm" class="btn btn-primary">Sign Up</a>
-		
-
+			<% } else if(errMsg==='failure' ){%>
+				<h4 style="color:red; font-size:70%;">
+					<p>yes you forgot again! </p>
+				</h4>
+				<% } %>
+					<div class="signup_link">
+						Dont have Student Login? <a href="getForm" class="btn btn-primary">Sign Up</a>
+					</div>
 	</div>
 </body>
+
 </html>

@@ -1,4 +1,4 @@
-1. Promise object represents the eventual completion or failure of an asynchronous operation and itrs resulting value.
+1. Promise object represents the eventual completion or failure of an asynchronous operation and its resulting value.
     Promise gives you result or error.
 
 2. API- application programming interfaces  //API,JSOn contracts b/w UI and Backend, Endpoints all same
@@ -26,7 +26,7 @@
     b 
 
 4. Node JS -> server side scripting using javascript
-    express js is a backed framwork(server) and is build top of nodejs
+    express js is a backend framwork(server) and is build top of nodejs
     -express js makes it easy to coe at high level
     -Node is like going low level fundamental programming
 
@@ -102,3 +102,6 @@ isEqualNode()
 
 
 Node.js uses an event-driven, non-blocking i/o model that makes it lightweight and efficient.
+
+let and var can be reassign but const can not be. eg. let a=34;   a=45; by this we can do
+and let and const can not be redefined. eg. let a=34; let a=98; this will give error

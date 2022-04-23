@@ -58,6 +58,10 @@ router.get('/homePage', function (req, res, next) {
 
 
         res.render('homePage',{ title: 'Students Home Page',comment:a});
+
+
+
+        
         // next();
     });
 });
