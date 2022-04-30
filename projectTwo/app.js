@@ -12,6 +12,7 @@ var banksubmit = require('./routes/banksubmit');
 var authentication = require('./routes/authentication');
 var checkLogin=require('./routes/index')
 var checkWelcome=require('./routes/index')
+var page=require('./routes/app')
 
 var app = express();
 
@@ -36,7 +37,7 @@ app.post('/auth', authentication);
 app.get('/welcome', authentication);
 app.post('/checkLogin',checkLogin);
 app.post('/checkWelcome',checkWelcome);
-
+app.get('/user', authentication);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
