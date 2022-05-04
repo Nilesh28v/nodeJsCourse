@@ -12,7 +12,9 @@ var banksubmit = require('./routes/banksubmit');
 var authentication = require('./routes/authentication');
 var checkLogin=require('./routes/index')
 var checkWelcome=require('./routes/index')
-var page=require('./routes/app')
+var postData=require('./routes/index')
+const autoInterval = require('./utils/autoInterval').autoInterval();
+
 
 var app = express();
 
@@ -38,6 +40,7 @@ app.get('/welcome', authentication);
 app.post('/checkLogin',checkLogin);
 app.post('/checkWelcome',checkWelcome);
 app.get('/user', authentication);
+app.post('/postData',postData);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

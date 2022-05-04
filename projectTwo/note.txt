@@ -1,3 +1,33 @@
+// It will find in the the new collection for any Active/new records
+// It will update the status from new to to Inprogress for that document
+// It will get the deposit and description from the document and continue with its process untill sending email.
+// after email is sent again update the status to Finished/Done
+
+// This whole functionality should be running at every 3 min.. You can do that using setInterval
+
+
+exports.sample = () => {
+    console.log('Hi');
+}
+const sampleFun = require('./utils/offlineJob').sample();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // First tell what is the batchSize(300)
 // get the count by executing the count query
 // divide the count by batchSize to get batchCount and execute query multiple times in loop by skipping values.
