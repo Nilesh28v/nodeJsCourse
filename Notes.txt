@@ -105,3 +105,39 @@ Node.js uses an event-driven, non-blocking i/o model that makes it lightweight a
 
 let and var can be reassign but const can not be. eg. let a=34;   a=45; by this we can do
 and let and const can not be redefined. eg. let a=34; let a=98; this will give error
+
+
+we can copy arrays and objects with the help of spread operator[...a],{...a}
+
+we can use toString to make array into Binary by the help of map 
+
+
+
+everything in javascript happens inside an execution context.
+That whole thing is called as execution context inside that there two things 
+1.Memory component
+2.Code component
+In memory component variable and functions values can be stored in a  key value format.
+Code component is a place where whole JavaScript code is executed
+Memory component is also called as variable environment 
+And code component is also called as thread of execution.
+
+0.Call stack known with various name:
+1.exectuion context stack
+2.program stack
+3.control stack
+4.runtime stack
+5.machine stack
+
+hoiasting will not work in arrow function bcz we store it in variable.
+and it treat it as variable and show undefined.
+eg. var getName=()=>{
+    console.log('hello');
+}
+this will also prevent hoiasting
+var getName2=function(){
+    console.log('hello)
+}
+
+
+javascript is losely typed language.

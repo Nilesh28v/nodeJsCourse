@@ -28,10 +28,11 @@ exports.autoInterval = () => {
         conn.connFun().then(async (db,req,res) => {
 
             var collection = db.collection('reqData');
-            const findResult = await collection.find().toArray();
+            const findResult = await collection.findOne({"status":"in process..."});
             console.log('Deposits values are', findResult);
-            Description=findResult.Description;
-            Deposits=findResult.Deposits;
+            const{Description,Deposits}=findResult;
+            // Description=findResult.Description;
+            // Deposits=findResult.Deposits;
             console.log('this are the values $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$',Description,Deposits);
         
             console.log('start');
@@ -62,7 +63,7 @@ exports.autoInterval = () => {
                 port: 587,
                 auth: {
                     user: "nilesh28vishwakarma@gmail.com",
-                    pass: "Nilesh@24334348",
+                    pass: "Nilesh@2hjghjgjg8",
                 },
             });
 

@@ -8,3 +8,4 @@ const promise= new Promise ((resolve, reject)=>{
 promise.then(result=>{
     console.log(result);
  })
+
