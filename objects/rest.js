@@ -4,4 +4,4 @@ const funcOne=(...args)=>{
 
 }
 
-console.log(funcOne(1,2,3,4,5,6));
+console.log(funcOne(1,2,3,8,5,6));

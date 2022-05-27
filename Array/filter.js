@@ -2,8 +2,5 @@
 
 const arr=[2,3,5,6];
 
-const result=arr.filter((num,index,array)=> {
-    return num<4;
-
-})
+const result=arr.filter((num,index,array)=> num>3)
 console.log(result);

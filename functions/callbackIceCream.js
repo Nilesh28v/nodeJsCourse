@@ -1,3 +1,5 @@
+
+
 let stocks={
     fruits:["strawberry","grapes","baanana","apple"],
     liquid:["water","ice"],
@@ -7,17 +9,28 @@ let stocks={
 
 let order=(fruitName,callProduction)=>{
     setTimeout(()=>{
-        console.log(`${stocks.fruits[fruitName]}`)
+        console.log(`${stocks.fruits[fruitName]} was selected`)
+        callProduction();
     },2000); 
 
-
-    callProduction();
 }
 
 let production=()=>{
-
-    setTimeout(()=>{
+ 
+    setTimeout(()=>{ 
         console.log("production has started");
+        setTimeout(() => {
+            
+            console.log('the Fruit has been chopped');
+            setTimeout(() => {
+                console.log(`${stocks.liquid[0]} and ${stocks.liquid[1]} was taken`);
+                setTimeout(() => {
+                    console.log('the machine was started');
+                }, 1000);
+                
+            }, 1000);
+        }, 2000);
+        
     },0000);
 };
 

@@ -22,9 +22,9 @@ const product={
 // console.log(productLabel,price,stock,rating); 
 
 
-const transection=(type,{label,stock})=>{
+const transection=(type,{label,stock=0}={})=>{  //we have given default value as 0
     console.log(type,label,stock);
     
   
 }
-transection('order',product) 
+transection('order') 

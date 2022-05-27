@@ -6,6 +6,7 @@
     "start": "nodemon ./bin/www"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "better-queue": "^3.8.10",
     "cookie-parser": "~1.4.4",
     "csv-string": "^4.1.0",
