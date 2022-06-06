@@ -22,22 +22,39 @@ MongoClient.connect(connectionURL,{useNewUrlParser:true},(error,client)=>{
 
 
 
-    db.collection('tasks').updateMany({
-        completed:false
-    },{
-        $set:{
-            completed:true
-        }
+    db.collection('users').deleteOne({
+
+                  age:33
+           
     }).then((result)=>{
-        console.log('done',result);
+        console.log(result);
+    }).catch((error)=>{
+        console.log(error);
     })
-    .catch((error)=>{
-        console.log('got some error',error);
-    })
+
+
+    // db.collection('users').deleteMany({
+    //     age:28
+    // }).then((result)=>{
+    //     console.log(result);
+    // }).catch((error)=>{
+    //     console.log(error);
+    // })
 
 
 
-
+    // db.collection('tasks').updateMany({
+    //     completed:false
+    // },{
+    //     $set:{
+    //         completed:true
+    //     }
+    // }).then((result)=>{
+    //     console.log('done',result);
+    // })
+    // .catch((error)=>{
+    //     console.log('got some error',error);
+    // })
 
 
 

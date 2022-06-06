@@ -141,3 +141,18 @@ var getName2=function(){
 
 
 javascript is losely typed language.
+
+
+
+
+1.javascript window is a global object which holds variables, function, history, location.
+2. the document also comes under the window and can be considered as the property of the window.
+
+
+
+API- Application Programming interface
+
+REST- Representational state transfer
+
+
+

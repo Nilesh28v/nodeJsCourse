@@ -6,16 +6,16 @@ function getAllStudent(){
   });
 }
 
-// getAllStudent().then(students=>{
-//     console.log(students)
-// }).catch(err=>{
-//     console.log("Error..")
-// });
+getAllStudent().then(students=>{
+    console.log(students)
+}).catch(err=>{
+    console.log("Error..")
+});
 
 //same
 
-async function DoSomething(){
-    const student = await getAllStudent();
-    console.log(student);
-}
-DoSomething();
+// async function DoSomething(){
+//     const student = await getAllStudent();
+//     console.log(student);
+// }
+// DoSomething();

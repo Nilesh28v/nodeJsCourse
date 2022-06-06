@@ -1,0 +1,1 @@
+Jenkins is used to    continues intigration,continues delivery, continues deployment

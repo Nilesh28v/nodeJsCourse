@@ -8,4 +8,4 @@ let profile= {
     }
 }
 
-console.log(profile?.laptop?.cpu?.length); //it will not give error, just give undefined because we use ? sign
+console.log(profile?.laptop?.cpu?.lengt); //it will not give error, just give undefined because we use ? sign
