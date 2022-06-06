@@ -1,0 +1,61 @@
+<h1> Edit Registration Form </h1><br>
+
+<form method="POST" name="form1" action="/updateRecordById?id=<%=student.TestID%>">
+
+    <label>First Name</label>
+    <input type="text" id="firstName" name="firstName" value="<%=student.firstName%>">
+
+    <label>Last Name</label>
+    <input type="text" id="lastName" name="lastName" value="<%=student.lastName%>">
+
+    <label>Fathers Name</label>
+    <input type="text" id="fathersName" name="fathersName" value="<%=student.fathersName%> "> <br> <br>
+
+    <label>Mothers Name</label>
+    <input type="text" id="mothersName" name="mothersName" value=" <%=student.mothersName%>">
+
+    <label> Email</label>
+    <input type="email" id="email" name="email" value="<%=student.email%>" required> <br><br>
+
+    <label>Phone number</label>
+    <input type="tel" id="phoneNumber" name="phoneNumber" value=" <%=student.phoneNumber%>">
+
+    <label for="birthday">Date of Birth:</label>
+    <input type="date" id="birthday" name="birthday" value="<%=student.birthday%>">
+
+    <br><br>
+
+    <label for="gender">Gender</label>
+
+    <select name="gender" value="<%=student.gender%>">
+        <option value="none" selected>Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">other</option>
+    </select>
+
+    <label for="course">Course</label>
+
+    <select name="course" value="<%=student.course%>">
+        <option value="nodejs">Nodejs</option>
+        <option value="mainframe">Mainframe</option>
+        <option value="java">JAVA</option>
+    </select> <br> <br>
+
+    <label for="city">City Name</label>
+    <select name="city" value=" <%=student.city%>">
+        <option value="indore">Indore</option>
+        <option value="Bangluru">Bangluru</option>
+        <option value="Hyderabad">Hyderabad</option>
+    </select>
+
+    <label>Pincode</label>
+    <input type="number" id="pincode" name="pincode" value="<%=student.pincode%>"> 
+    <label>Password</label>
+    <input type="password"  name="password" value="<%=student.password%>" required> 
+    <br><br>
+    <button>Save </button>
+    <input type="hidden" value=" <%=student.TestID%>"><br>
+</form>
+
+<a href='/getRecord'> <input type="submit" value="Cancel"> </a>

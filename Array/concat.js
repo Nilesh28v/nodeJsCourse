@@ -4,7 +4,7 @@ a=a.concat(b);  //concatination can only perform b/w integer
 console.log(a);
 
 
-// let c=[a,b];
-// let d=[cf,df];     //not able to run
-// c=c.concat(d);     
-// console.log(c);
+let c=['a','b',1];
+let d=['cf','df'];     //not able to run
+c=c.concat(d);        //now it is running
+console.log(c);

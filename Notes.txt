@@ -1,0 +1,158 @@
+1. Promise object represents the eventual completion or failure of an asynchronous operation and its resulting value.
+    Promise gives you result or error.
+
+2. API- application programming interfaces  //API,JSOn contracts b/w UI and Backend, Endpoints all same
+    a->  api <-b   //a dont know b's language, api provide endpoints(bridge)
+    //common language that UI and Backend will understand
+    E.g https://api.twitter.com/getTweets    
+
+    API are 2 types- 
+    public:- 
+            publicily exosed and anyone with/without valid credientional can use it 
+            Google Maps API
+            Twitter API
+            Weather API
+            ->we can plug those into our website
+    
+    private/protected:-
+                    we can not access over internet without username/password 
+                    we make for our company
+                   
+
+3.  http://localhost:3000/getusers
+    
+    Endpoint Name-> getusers
+    port :3000  //api is pointing to this port
+    b 
+
+4. Node JS -> server side scripting using javascript
+    express js is a backend framwork(server) and is build top of nodejs
+    -express js makes it easy to coe at high level
+    -Node is like going low level fundamental programming
+
+5.  POSTMAN is used to do API testing
+
+6. CRUD
+    POST = create
+    GET = Read 1 or many
+    PUT = Update
+    Delete= Delete
+
+7.  we collet the data using req.params."variable" 
+
+8. MIDDLEWARE:-(set of function)  
+
+              UI-> Request -> API -> Middleware ->Handler
+
+                1.middleware used to security check of user's token//access/authorization
+                2. body parsing of the request(like it has correct data or not)
+                3. sanitizing data
+                4. logged(this helps in debugg)
+
+                {
+                    Middleware functions can perform the following tasks:
+
+                        Execute any code.
+                        Make changes to the request and the response objects.
+                        End the request-response cycle.
+                        Call the next middleware function in the stack.
+                }
+
+            if you want to do all 4 thing to any handler you need to do separte for everyone but insted
+            we use middleware ,before api go to handler it first go to middleware 
+
+9. Express JS:
+                *use the application generator tool, express-generator, to quickly create an application skeleton.
+                * Easily get standard application shell for quick and rapid prototyping   
+
+10. bin -> www -> server root directory
+        ->comiled code
+    pulic folder
+        ->assets
+        ->stylesheets
+        ->scripts
+    routes
+        ->moudles
+            ->we manually created all modules and routes etc.(like user,product files)
+        
+    views
+        ->template files ->UI
+                        ->ejs etc.
+
+    app.js -> the herat of the application
+            ->import your modules
+            ->add the requierd modules and pakages etc
+
+    pakage.json-> all dependecies
+                ->scripts for starting, testing,etc.
+
+11.   
+What is the default scope of Node.js application? local
+
+12.  Which module is used to serve static files in Node.js?node static
+
+13.   
+What is the use of underscore variable in REPL session?  to get the last result
+
+
+How many Node object methods are available? 18
+
+How to check equality of two nodes?  
+isEqualNode()
+
+
+Node.js uses an event-driven, non-blocking i/o model that makes it lightweight and efficient.
+
+let and var can be reassign but const can not be. eg. let a=34;   a=45; by this we can do
+and let and const can not be redefined. eg. let a=34; let a=98; this will give error
+
+
+we can copy arrays and objects with the help of spread operator[...a],{...a}
+
+we can use toString to make array into Binary by the help of map 
+
+
+
+everything in javascript happens inside an execution context.
+That whole thing is called as execution context inside that there two things 
+1.Memory component
+2.Code component
+In memory component variable and functions values can be stored in a  key value format.
+Code component is a place where whole JavaScript code is executed
+Memory component is also called as variable environment 
+And code component is also called as thread of execution.
+
+0.Call stack known with various name:
+1.exectuion context stack
+2.program stack
+3.control stack
+4.runtime stack
+5.machine stack
+
+hoiasting will not work in arrow function bcz we store it in variable.
+and it treat it as variable and show undefined.
+eg. var getName=()=>{
+    console.log('hello');
+}
+this will also prevent hoiasting
+var getName2=function(){
+    console.log('hello)
+}
+
+
+javascript is losely typed language.
+
+
+
+
+1.javascript window is a global object which holds variables, function, history, location.
+2. the document also comes under the window and can be considered as the property of the window.
+
+
+
+API- Application Programming interface
+
+REST- Representational state transfer
+
+
+

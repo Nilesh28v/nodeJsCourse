@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <%- include('./head.ejs') %>
+        <%- include('./nav.ejs') //we have made seperate file nav.ejs to store our links %>
+            <center>
+                <h1>Welcome</h1>
+            </center>
+</head>
+<hr>
+<hr>
+
+<body>
+    <div>
+        <form id="login" method="post" action="/postData">
+            <table>
+                <div class="login">
+                    <h1>Get Bank Account Details on you'r Email</h1>
+                    <form action="/auth" method="post">
+                        <div class="Deposits">
+                            <tr>
+                                <td>
+                                    <label><b> Deposits:</b> </label>
+                                    <select name="Deposits">
+                                        <option value="0">0</option>
+                                        <option value="3">3</option>
+                                        <option value="1">1</option>
+                                    </select>
+
+                                </td>
+                            </tr>
+                        </div>
+                        <div class="Description">
+                            <tr>
+                                <td>
+                                    <label><b> Description:</b> </label>
+                                    <select name="Description">
+                                        <option value="ATM">ATM</option>
+                                        <option value="Cash">CASH</option>
+                                        <option value="Debit Card">Debit</option>
+                                    </select>
+
+                                </td>
+                            </tr>
+                        </div>
+
+
+
+
+                        <tr>
+                            <td><input type="submit" name="log" id="log" value="search"></td>
+                            <br><br>
+                        </tr>
+
+                        </tr>
+            </table>
+        </form>
+    </div>
+    <footer class="background">
+        <%- include('./footer.ejs') %>
+    </footer>
+</body>
+<style>
+    body {
+        background-color: rgb(209, 218, 233);
+        margin-left: 20px;
+    }
+</style>
+
+</html>

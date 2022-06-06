@@ -1,0 +1,1 @@
+create table std1(email_id varchar, name varchar, contact_no int)

@@ -1,0 +1,17 @@
+firstly set the path so that by running 'mongo' command it start the mongod;
+show dbs(to show all db in mongo)
+
+create a new or switch databases 'use dbName'
+
+view current databases 'db'
+
+delete database 'db.dropDatabase()
+
+ MongoDb commands for Collections
+
+ show Collections
+ create a collection named 'comments'
+ db.createCollection('comments')
+
+ delete Collections
+ db.'collection Name'.drop
