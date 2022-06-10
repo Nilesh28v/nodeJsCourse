@@ -8,4 +8,4 @@ const resultArr=arr.map((num,index,array) =>{     //(num)   we can use this much
 
     return num*num;
 });
-console.log(resultArr);
+console.log(resultArr); 
