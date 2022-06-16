@@ -1,9 +1,24 @@
+NoSQL database:=  
+.it's not no sql it's not only sql.
+.nosql dataase is used to refer a non-sql no non-realtional database.
+.it's not even a replacement to RDBMS.
+.NoSQK database doesn't use talbes for stroing data.
+.as compared to the orlder days, we are saving more and more data.
+.it is generaliy used to store big data and real time web applications.
+
+
+.SQL database are vertically scalable. where nosql are horizontall scalable. 
+
+(  MONGODB  used by company)Adobe,linkedln,mcAfee,eBay
+
+
 firstly set the path so that by running 'mongo' command it start the mongod;
 show dbs(to show all db in mongo)
 
 create a new or switch databases 'use dbName'
 
 view current databases 'db'
+show db , to see all db
 
 delete database 'db.dropDatabase()
 
@@ -15,3 +30,239 @@ delete database 'db.dropDatabase()
 
  delete Collections
  db.'collection Name'.drop
+
+
+
+ db.hostInfor() method return a document with information about the system MongoDb runs on
+
+
+ db.dropDatabase() method removes the current database.
+
+db.collection.renameCollection() method changes the name of a collection.
+
+db.collection.findAndModify() method atomatically modifies and returns a single document
+
+db.collection.findOneAndUpdate() method finds a single document and updates it.
+
+show collections   
+
+
+
+javascript object notation is a stadard file format that uses human type readable text to transmit data with attribute-value pairs and array data types.
+mainly used for asynchronous browser-server communication.
+json is language-independent format.
+to send the data we use json and to store the data we use BSON.
+BSON use as network tranfer format in the MOngodb database.
+
+BSON is a serialization format encoding format for JSON mainly used for storing and accessing the documents. 
+
+
+
+
+CRUD Operation:
+1. create doc:
+    .insert()   //this dosent show objectId after inserting // it calls bulk function
+    .insertOne()
+    .insertMany()  //when inserted in this it shows all of thems objectId
+
+for inserting if we create a array of object and store in variable and then we insert like this
+db.collectionName.insert(variable) then all the objects which stored in variable are automaticly store
+in the mongodb.
+
+
+2. REad doc
+    .find()  //db.collectionName.find( { <query> }, {<projection>} )   //query and projection are opetional
+    .findOne()
+    .findMany()
+
+  db.tasks.find().pretty()    
+  > db.tasks.find().forEach(printjson)  //we can also use this insted of pretty()
+
+> db.tasks.find().pretty()[1]//it give 2nd element with where clause
+> db.tasks.find({completed:false})
+> db.tasks.find({completed:false}).limit(2) //by limit we can decide how many result we wanted to see
+> db.tasks.find({completed:false}).limit(1).skip(1)   //this will skip first record then it show 1 result bcz of limit(1)
+ 
+
+> db.student1.find({name:"Nilesh",age:24}).pretty() //by , we can give more than 1 condition to find data
+> db.student1.find({$and:[{name:"Nilesh"},{age:{$lt:30}}]})  //we can write with and operator also 
+> db.student1.find({$or:[{name:"Nilesh"},{age:{$lt:30}}]})  //this or that
+> db.student1.find({gender:"Male",$or:[{name:"Nilesh"},{age:{$lt:30}}]})  //here gender will be complusory and in 'or' condition at least one thing should be correct
+//we can also use 'nor' in that case name and age should not match but gender should match
+
+> db.student1.find({age:{$gt:24}}).pretty() //$gt is operator to find greator values
+> db.student1.find({age:{$lte:24}}).pretty() //lessthen
+> db.student1.find({age:{$gt:20, $lte:30}}).pretty()
+> db.student1.find({age:{$in:[24,343]}}).pretty()  //in the array 24, 343 values , it result only those included data
+> db.student1.find({age:{$nin:[24,343]}}).pretty()    //not in , it will show other data then 24,343
+
+
+
+projection:
+
+> db.student1.find({age:{$lte:1000}},{name:1}).pretty() // it willl only show name detils of data  //but _id is still showing
+> db.student1.find({age:{$lte:1000}},{name:1,_id:0}).pretty()  //_id:0  means it wil not show the id values 
+
+
+
+> db.student1.find({abc:{$exists:true}}).pretty()//it will show on which data 'abc' is exsiting
+//we can also do false to know all other data which dosent have 'abc' values
+
+
+//cursor:-
+
+var x=db.students.find()  //we can store any query to variable and call them by our own variable easly this is cursor.
+
+
+
+
+UPDATE:- update() will only single record
+
+
+db.collectionName.update({<query}, {$set:{key:value}})
+
+> db.student1.update({age:4353},{$set:{age:101}})
+
+> db.student1.update({age:4353},{$set:{age:101}}, {multi:true}) //by this way also we can achieve updateMany 
+
+> db.student1.save({ "_id" : ObjectId("624417f2d473f71480a2e858"), "name" : "shyamM", "age" : 22 })  //after .save i copied everything and changed according to what changes need and enter it can may fields at a time.
+//but if there no similar recorded found in .save it will insert new record
+// we can not remove fields by this 
+
+> db.student1.updateMany({},{$set:{email:null}})  //that empty {} will perform on every field
+
+> db.student1.updateMany({},{$rename:{name:"firstName"}}) //renaming name attribute to firstName
+
+
+
+
+> db.student1.updateMany({},{$unset:{email:null}}) //this way can delete any attribute also from collection
+// 'null' is not neccssary it run with 'email' also.
+
+
+
+
+DELETE:
+  .deleteOne({<query>})
+  .deleteMany({<query>})
+
+
+> db.student1.deleteOne({firstName:"shyamM"})
+
+
+
+> db.student1.remove({}) ///it will remove all reocrds
+
+
+> db.student1.remove({firstName:"RAM"},1) //this will only 1 "RAM" value we can change this values
+//if we remvoed ,1 then it will remove from everywhere
+
+
+
+
+
+Aggregation:-   same thing can be achived by find() but in millions of data it will give many records.
+
+multilevel filtering.
+Aggregation is like filteration and grouping.
+
+Aggregation Modes:
+  .Aggregation Pipline
+  .Map-Reduce
+  .single purpose Aggregation Operation
+
+the Pipline provides efficient data Aggregation using native operations within Mongodb. and is the preferred method for data Aggregation in mongodb.
+
+Aggregation work as a pipeline , or a list of operators/filers applied to the data. We can pipe a collection into the top and transform it through a series of operations, eventually popping a result out the bottom.
+
+//collection will go through many 'STAGE' and filter in each give output.
+
+Aggregation STAGES OVERVIEW::::::::::::::::::::::stage operator
+
+$match,$group,$project,$sort,$count,$limit,$skip,$out,$unwind
+
+
+
+
+db.student1.aggregate([
+  {$count:"Total_records:"}
+])
+
+
+db.student1.aggregate([  ///equalent to find
+  {$match:{name:"RAM"}}
+])
+
+
+db.student1.aggregate([ 
+
+  //stage-2
+  {$match:{age:{$gt:10}}},     
+  //stage-3
+  {$group:{_id:"$gender",count_stu:{$sum:1}}}
+])
+
+
+db.student1.aggregate([ 
+
+  //stage-2
+  {$match:{age:{$gt:10}}},     
+  //stage-3
+  {$group:{_id:"$gender",count_stu:{$sum:1},stu_name:{$push:"$name"}}}  //push will create a list of those names which are having male,female or if field having no gender values
+])
+
+
+
+db.student1.aggregate([ 
+
+  //stage-2
+  {$match:{age:{$gt:10}}},     
+  //stage-3
+  {$group:{_id:"$gender",count_stu:{$sum:1},stu_name:{$push:"$name"}}} ,
+  {$match:{_id:"male"}},
+  {$project:{_id:0,stu_name:1}}
+])
+
+
+
+db.student1.aggregate([ 
+  {$group:{_id:"$sec",count_stu:{$sum:1}}} ,
+ 
+])  //this will give student in every section counting.
+ 
+
+db.student1.aggregate([ 
+  {$group:{_id:"$sec",count_stu:{$sum:1}}} ,
+  {$sort:{_id:1}},    //1 for asending -1 for descending
+  {$limit:2},         //if we wanted top 2 values
+  {$skip:1}             //this will skip the first value
+ 
+]) 
+
+
+db.student1.aggregate([ 
+  {$group:{_id:"$sec",count_stu:{$sum:1}}} ,
+  {$out:"NewCollection"}    //by this command we can made new collection with the filtered data
+ 
+ 
+]) 
+
+
+db.student1.aggregate([ 
+  {$unwind:"$skills"},   //if we have array as a value in data then to access specific data inside that array we need to unwind first then only we can use
+  {$group:{_id:"$sec"}}   //not used this query
+]) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

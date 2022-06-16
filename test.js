@@ -1,4 +1,3 @@
-const b=10;
-for(i=0; i<b;i++){
-    console.log(i);
-}
+const a=[1,2,3,4,4,4,5,3,2,4,5]
+const b=[...new Set(a)]
+console.log(b);

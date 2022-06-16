@@ -1,5 +1,5 @@
-var a=['sanjay','aman','rehman','rahul']
+var a=['sanjay',1,'aman','rehman','rahul']
 
 
-console.log(a.includes('aman')); //true it is case sensitive
+console.log(a.includes(1)); //true it is case sensitive
  

@@ -5,17 +5,47 @@
 
 
 
-const a=[{salary:10000
+// const a=[{salary:10000
 
-},{
-    salary:20000
+// },{
+//     salary:20000
 
-},{
-    salary:30000
+// },{
+//     salary:30000
 
-}]
-a.forEach((salary)=>{
-    result=salary+result
-})
+// }]
+// a.forEach((salary)=>{
+//     result=salary+result
+// })
+
+
+// function a(){
+//     let c=0;
+//     return c;
+
+// }
+// a()
+// console.log(typeof(c));  //it will give undefined
+
+
+
+// function add(...a){
+//     let i=0;
+//     let sum=0;
+//     for(i of a){
+//         sum +=i
+//     }
+//     console.log(sum);
+
+// }
+// add(10,20,30)
+
+
+
+const a=1
+const b= a++ + ++a;
+console.log(b);
+console.log(a);
+
 
 

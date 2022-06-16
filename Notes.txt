@@ -156,3 +156,14 @@ REST- Representational state transfer
 
 
 
+closure is the combination of a function bundled together(enclosed) with the surrounding stated(lexical enironment)
+uses:
+. module design pattern
+. currying
+. functions like once
+. memoize
+. maintaining state in async world
+. setTimeouts
+. Iterators
+. etc...
+

@@ -4,9 +4,7 @@
 let name={
     fname:'Nilesh',
     lname:'Vishwakarma',
-    
     }
-
 let printFullName=function(homeTown){
     console.log(this.fname+" "+this.lname+" "+homeTown);
 }

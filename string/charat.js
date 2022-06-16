@@ -4,4 +4,8 @@ console.log(b);
 
 
 b=a.charCodeAt(2); //gives character code
-console.log(b);
+console.log(b);   //ASCII
+
+
+var c=String.fromCharCode(65)//we give ASCII no. and it gives us value
+console.log(c);
