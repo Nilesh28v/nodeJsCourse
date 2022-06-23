@@ -6,6 +6,6 @@ a.length=0  //this is also one way to empty
 
 // while(a.length){    //this is also one way to empty but not recommended to use
 //     a.pop()
-//     console.log('hello');
+//     console.log('hello' );
 // }
 console.log(a);

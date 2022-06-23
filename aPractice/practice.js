@@ -1,13 +1,5 @@
-const a ='7899002939';
-// const g=Array.from(a) //['7','8',....]
-var d=[];
-var b=a.length;
-for(var i=0;i<b;i++){
-    var c=a[i]
-    var rgxp=new RegExp(c,"g");  
-    console.log(rgxp); 
-    var value=`${c}}  : ${a.match(rgxp).length}`
-    d.push(value)
-}
-var d=[...new Set(d)]
-console.log(d);
+var a=[1,2,3,3,8,1,44,4,4,4,45,4,4,43343,5]
+var c=[5,8,8,44]
+var b=c.indexOf(a[6])
+console.log(b);
+

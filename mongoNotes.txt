@@ -257,7 +257,11 @@ db.student1.aggregate([
 
 
 
-
+INDEX:;
+ 
+ db.collectionName.getIndexes() // we use to get the detailes of getIndexes
+ 
+ > db.student1.createIndex({lname:1},{unique:true})
 
 
 
