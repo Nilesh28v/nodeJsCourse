@@ -49,3 +49,99 @@ console.log(a);
 
 
 
+
+Abdul Rahman3:03 PM
+arrow function
+normal function
+const user1 = {
+  firstName: 'Fission',
+  lastName: 'Labs',
+  fullName: () => {
+    return `${this.firstName} ${this.lastName}`;
+  }
+}
+
+const user2 = {
+  firstName: 'Fission',
+  lastName: 'Labs',
+  fullName: function () {
+    return `${this.firstName} ${this.lastName}`;
+  }
+}
+
+console.log(user1.fullName());
+console.log(user2.fullName());
+
+Abdul Rahman3:07 PM
+const array1 = [1, 2, 4];
+
+Array.prototype.push.apply(array1, [6, 7, 8])
+
+Abdul Rahman3:11 PM
+const p1 = Promise.resolve(1);
+const p2 = Promise.reject(2);
+const p3 = Promise.resolve(3);
+
+Promise.all([p1, p2, p3]).then((res) => {
+  console.log('Promise resolved', res);
+}).catch((error) => {
+  console.error('Promise rejected', error);
+})
+
+Abdul Rahman3:13 PM
+async function fun(id) {
+  console.log(id, "start");
+  const arr = ["a", "b", "c"];
+  await Promise.resolve("d").then(result => console.log(id, result))
+  setTimeout(() => {
+    arr.forEach(item => {
+      console.log(id, item);
+      // while(true) {}
+    })
+
+  })
+  await Promise.resolve("e").then(result => console.log(id, result))
+  console.log(id, "end")
+}
+fun("id1")
+fun("id2")
+Abdul Rahman3:21 PM
+stream
+Abdul Rahman3:23 PM
+cluster
+spawn vs fork
+PUT vs PATCH
+Abdul Rahman3:25 PM
+API vs REST API
+Abdul Rahman3:28 PM
+1. CORS
+2. NO Response
+3. 500 Internal server error
+Abdul Rahman3:31 PM
+docker
+microservices
+monolithic
+Abdul Rahman3:33 PM
+mongo object id
+Abdul Rahman3:36 PM
+body-parser
+Abdul Rahman3:37 PM
+middleware
+Abdul Rahman3:38 PM
+next() ?
+Abdul Rahman3:39 PM
+refresh token
+session COOKIES
+http stateful or stateless
+Abdul Rahman3:41 PM
+payload
+params
+query params
+Abdul Rahman3:42 PM
+route lvel
+Abdul Rahman3:44 PM
+ts-node
+express
+hapi
+server-less + express
+
