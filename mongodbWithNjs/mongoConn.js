@@ -9,5 +9,4 @@ const connFun = async () => {
     const db = client.db(dbName);
     return db;
 }
-
 exports.connFun = connFun;

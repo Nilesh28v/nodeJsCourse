@@ -6,3 +6,4 @@ console.log(b)  // by the replace we cant not change in the main string but we c
 
 b=a.replace(/this/g,'that')  //by this way we can replace in all occurance
 console.log(b);
+

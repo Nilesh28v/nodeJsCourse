@@ -26,8 +26,8 @@
     b 
 
 4. Node JS -> server side scripting using javascript
-    express js is a backend framwork(server) and is build top of nodejs
-    -express js makes it easy to coe at high level
+    -express js is a backend framwork(server) and is build top of nodejs
+    -express js makes it easy to code at high level
     -Node is like going low level fundamental programming
 
 5.  POSTMAN is used to do API testing
@@ -38,13 +38,13 @@
     PUT = Update
     Delete= Delete
 
-7.  we collet the data using req.params."variable" 
+7.  we collect the data using req.params."variable" 
 
 8. MIDDLEWARE:-(set of function)  
 
               UI-> Request -> API -> Middleware ->Handler
 
-                1.middleware used to security check of user's token//access/authorization
+                1. middleware used to security check of user's token//access/authorization
                 2. body parsing of the request(like it has correct data or not)
                 3. sanitizing data
                 4. logged(this helps in debugg)
@@ -166,4 +166,69 @@ uses:
 . setTimeouts
 . Iterators
 . etc...
+
+
+
+
+
+if we are using app.use(bodyParser.json()) or app.use(express.json()) they should be defined above then all middleware
+
+
+there is 'path' module which we use to change the path where the opertion have to be perform
+const dirPath=path.join(__dirname,'files')
+__dirname will give current folder path   (D:\githubCode\GitHub\nodeJsCourse\youtube)
+and after that we are joining 'files' folder so new path will be
+(D:\githubCode\GitHub\nodeJsCourse\youtube\files)
+
+we use fs.readdir(pathname,callback) this to know which are the files are there in the folder
+
+
+if data show as "buffer..........."
+then maybe we missed using 'utf8'
+
+
+
+app.set('view engine','ejs');
+we use above code when we wanted to use any view engine
+and it will works on 'views' folder defaultly
+
+and in the API we use res.render('file name in views folder (we dont have to put extension of file)')
+
+
+<%- include ('common/header')%>
+we use highphan - when we want to use any file to be used
+basily to load html(ejs) files
+
+
+
+regex used to make search api
+
+
+app.get('/serach/:key',async(req,res)=>{
+    let data=await product.find({
+        "$or":[
+            
+            {"name":{$regex:req.params.key}},
+           { "brand":{$regex:req.params.key}}
+        
+        ]
+
+    });
+    res.send(data)
+ 
+
+})
+
+
+
+clr = setInterval(logkaro,2000) and to stop this we use
+clearInterval(clr)/clearTimeout(clr)
+
+
+we can store data in local by using localStorage.setItem('name', 'Nilesh')
+and we can also clear this local storage by localStorage.clear()
+and by using localStorage.getItem('name') this will give 'Nilesh'
+
+
+
 

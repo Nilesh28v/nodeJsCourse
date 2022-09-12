@@ -6,6 +6,8 @@ const Post=require('../models/post')
 
 router.get('/',(req,res)=>{
     Post.find({}).then((posts)=>{
+        res.cookie('sky','blue',{httpOnly:true,maxAge:12000})
+        console.log(req.cookies);
         res.status(200).send(posts)
     }).catch((e)=>{
         res.status(500).send(e)
@@ -52,7 +54,6 @@ router.patch('/:postId',async(req,res)=>{
        const updatedPost= await Post.updateOne(
             {_id:req.params.postId},
             {$set:{title: req.body.title}})
-
             res.json(updatedPost)
 
     }    

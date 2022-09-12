@@ -13,14 +13,14 @@ class table{
                 console.log(a);
                
                
-                const a1 = 2;
-                const b1 =3;
-                let add1= 0;
-                setTimeout(() => {
-                    // code is here
-                    console.log('Inside');
-                    add1 =  a1+b1;
-                }, 50);
+                // const a1 = 2;
+                // const b1 =3;
+                // let add1= 0;
+                // setTimeout(() => {
+                //     // code is here
+                //     console.log('Inside');
+                //     add1 =  a1+b1;
+                // }, 50);
                    
             
         

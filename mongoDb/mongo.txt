@@ -1,0 +1,178 @@
+> db.flightData.updateOne({distance:12000},{$set:{marker:"delete"}})
+
+in above query distance is used to find which document to update and second field is used to update it. if the marker is
+present in document then it will modify it or other wise it will create new data in that document as marker:"delete"
+
+> db.flightData.updateMany({},{$set:{marker:"toDelete"}})
+
+in above we are trying to update on each document bcz we are using {} which means all, and we will create new field as "marker" if not alerady existed.
+
+
+> db.flightData.deleteMany({})
+to delete everything
+
+> db.flightData.deleteMany({marker:"toDelete"})
+delete with conditions also  
+
+> db.flightData.insertMany([{},{},..... ])
+we can insert many data by using array
+
+> db.flightData.find({distance:{$gt:900}}).pretty() 
+here gt is greatorthen and in findone we just got first result which will match only but in find all result we got.
+ 
+> db.flightData.updateOne({_id:ObjectId("62e264e841ebbde9cc97347d")},{$set:{delayed:false}})
+this is update only one document
+
+> db.flightData.update({_id:ObjectId("62e264e841ebbde9cc97347d")},{delayed:false})
+but in simple update if we try to update any pieace of data then it will change whole document with {dealyed:false} only, 
+all the previous data will be replaced with that data.
+
+other wise update and updateMany are same.
+
+> db.flightData.replaceOne({_id:ObjectId("62e264e841ebbde9cc97347d")},{"departureAirport": "MUC",     "arrivalAirport": "SFO",     "aircraft": "Airbus A380",     "distance": 12000,     "intercontinental": true 
+  })
+
+this replace will replace the object
+
+
+
+
+Type "it" for more
+> it
+in mongodb when we use find() to access any data it only gives starting 10 records for next 10 records we have to type 'it' and the data is not in array as we inserted.
+> db.passengers.find().toArray()
+so we use .toArray method to get all records at once.
+
+
+
+> db.passengers.find().forEach((pData)=>{printjson(pData)})
+by this way also we can get all records(find() give us "cursor")
+
+we can use forEach() to use any JS code.
+
+
+pretty() is method which works on cursor but if we use pretty() in findOne() then
+it will give error bcz findOne() will not give cursor.
+
+
+{
+        "_id" : ObjectId("62e2bd35964c57cd04cab3a7"),
+        "name" : "Albert Twostone",
+        "age" : 68,
+        "hobbies" : [
+                "sports",
+                "cooking"
+        ]
+}
+> db.passengers.findOne({name:"Albert Twostone"}).hobbies
+[ "sports", "cooking" ]
+
+
+
+projection()
+
+> db.passengers.find({},{name:1,_id:0}).pretty()
+1 to show data, 0 to not show data
+
+
+
+
+
+
+> db.flightData.find({"status.details.responsible":"Max schwarzmueller"}).pretty()
+{
+        "_id" : ObjectId("62e264e841ebbde9cc97347d"),
+        "departureAirport" : "MUC",
+        "arrivalAirport" : "SFO",
+        "aircraft" : "Airbus A380",
+        "distance" : 12000,
+        "intercontinental" : true,
+        "status" : {
+                "description" : "on-time",
+                "lastUpdated" : "1 hour ago",
+                "details" : {
+                        "responsible" : "Max schwarzmueller"
+                }
+        }
+}
+
+
+DATA TYPE:-  Text,Boolean,Number,ObjectId, ISODate, Embedded document, Array
+
+> db.companies.insertOne({name:"Fresh Apples Inc",isStartup:true,employess:33,funding:12345689012345680,details:{ceo:"Mark Super"},tags:[{title:"super"}],foundingDate:new Date(),insertedAt:new Timestamp()})
+{
+        "_id" : ObjectId("62e39f1bcd06cf7030fa85d8"),
+        "name" : "Fresh Apples Inc",
+        "isStartup" : true,
+        "employess" : 33,
+        "funding" : 12345689012345680,
+        "details" : {
+                "ceo" : "Mark Super"
+        },
+        "tags" : [
+                {
+                        "title" : "super"
+                }
+        ],
+        "foundingDate" : ISODate("2022-07-29T08:49:30.997Z"),
+        "insertedAt" : Timestamp(1659084571, 1)
+}
+used all type of DataType
+
+
+db.stats() 
+it gives details about the database
+
+
+> db.numbers.insertOne({a:NumberInt(1)})
+NumberInt() it is taking less data to store
+
+
+> typeof db.numbers.findOne().a
+number
+we can know the datatype of the data
+
+
+Schema Validation: it only works when we create collection at that time if added validition
+
+db.createCollection("student",{
+    validator:{
+            $jsonSchema:{
+                    bsonType:"object",
+                    required:["name","email","txt", "comment'],
+                    properties:{
+                        name:{
+                                bsonType:"string",
+                                description:"must be a string and is required"
+                        },
+                        email:{
+                                bsonType:"string",
+                                description: "must be a string and is required"
+                        }
+                        txt:{
+                                bsonType:"objectId",
+                                description:"must be a objeoctid and is required"
+                        },
+                        comments:{
+                                bsonType:"array",
+                                description:"must be a array and is required"
+                                items:{                                                 //items is having array that we have mention which type of data array is containg
+                                        bsonType:"objectId"
+                                        required:["text"]
+                                        properties:{
+                                                text:{
+                                                        bsonType:"text",
+                                                        description:"must be a string and is required"
+                                                }
+                                        }
+                                }
+                        }
+                    }
+                    }
+            }
+      })
+
+
+
+if we wanted to change anything in validation then we use 
+db.runCommand....(check udemy video)
