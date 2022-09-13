@@ -10,7 +10,7 @@ abc();
 
 
 console.log(c);
-console.log(a);
+// console.log(a);
 
 
 // objects, accessing objs, copying, spread, rest, hosting, scopes

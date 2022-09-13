@@ -2,7 +2,7 @@ NoSQL database:=
 .it's not no sql it's not only sql.
 .nosql dataase is used to refer a non-sql no non-realtional database.
 .it's not even a replacement to RDBMS.
-.NoSQK database doesn't use talbes for stroing data.
+.NoSQl database doesn't use tables for stroing data.
 .as compared to the orlder days, we are saving more and more data.
 .it is generaliy used to store big data and real time web applications.
 
@@ -142,6 +142,7 @@ db.collectionName.update({<query}, {$set:{key:value}})
 
 
 
+
 DELETE:
   .deleteOne({<query>})
   .deleteMany({<query>})
@@ -213,7 +214,7 @@ db.student1.aggregate([
 
 
 
-db.student1.aggregate([ 
+db.student.aggregate([ 
 
   //stage-2
   {$match:{age:{$gt:10}}},     
@@ -264,7 +265,7 @@ INDEX:;
  > db.student1.createIndex({lname:1},{unique:true})
 
 
-
+db.
 
 
 

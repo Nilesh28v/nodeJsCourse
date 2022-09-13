@@ -4,7 +4,6 @@ class a{
         this.c='c';
     }
     e(){console.log(this.b);}
-
 }
 class f extends a{
     constructor(b,c,g){
@@ -17,3 +16,4 @@ class f extends a{
 }
 const crun=new f('abc');
 console.log(crun.h());
+

@@ -10,8 +10,6 @@ app.get('/showMobileDetails', function (req, res) {
     const sql = require('mssql');
 const pool = require('./exportConn');
 
-
-
 pool.getPool().then(async (pool) => {               //****Create****
     let result1 = await pool.request()
     

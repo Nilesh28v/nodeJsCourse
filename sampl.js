@@ -15,7 +15,7 @@ console.log(person);
 console.log(person.fName);
 console.log(person.fullName('AECS Layout'));
 person.age = 23;
- console.log(person.age);
+console.log(person.age);
 console.log(person['city']);
 delete person.gender;
 person.pincode = 560068;

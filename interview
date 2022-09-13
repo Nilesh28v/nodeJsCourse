@@ -145,3 +145,154 @@ express
 hapi
 server-less + express
 
+
+
+
+
+
+
+var arr1= [1, 2, 3, 4, 5]
+var arr2 = [10, 8, 3, 4, 3, 8, 6]
+var arr3=[]
+var position = 2
+
+for(var i=0;i<arr1.length;i++){
+    if(i==position){
+        for(var j=0;j<arr2.length;j++){
+            arr3.push(arr2[j])
+        }
+    }
+    arr3.push(arr1[i])
+}
+console.log(arr3);
+
+
+// ***************FACILE*****************
+
+// function sayHi(){
+//     console.log(name);
+//     console.log(age);
+//     var name = 'Valmik';
+//     let age = 21;
+// }
+// sayHi();
+
+
+// let a = 3;
+// let b = new Number(3);
+// let c = 3;
+// console.log(typeof(new));
+// console.log(a==b);
+// console.log(a===b);
+// console.log(a===c);
+
+
+
+// const fs = require('fs');
+// const data = fs.readFileSync('/file.md'); // will block or not??
+// console.log(data);
+// moreWork(); // When will it execute?? after console or before console?
+
+
+
+// const fs = require('fs');
+// fs.readFile('/file.md', (err, data) => {
+//   if (err) throw err;
+//   console.log(data);
+// });
+// moreWork();  // When will it execute?? after console or before console?
+
+
+
+
+// const shape = {
+//   radius:10,
+//   diameter(){
+//       return this.radius*2;
+//   },
+//   perimeter: () => {
+//       console.log('this.radius', this.radius);
+//       2 * Math.PI * this.radius
+//   }
+// };
+// console.log(shape.diameter());
+// console.log(shape.perimeter());
+
+
+
+
+
+//valueFy
+
+S = ( )
+
+S  = ‘( ( ( ( )’’ = false
+
+S = ‘()’ true
+
+
+S = ‘((()))()’ true
+
+
+)( = > false
+
+
+Function validatePranthesis(S) {
+	arr=S.split(“”);
+	len=arr.length;
+	for(var i=0;i<len;i++){
+Let count=0;
+if(arr[i]==”(” ){
+count+=1	
+}
+Else{
+Return true;
+
+
+—-----------------------
+
+
+
+while(true) {
+setTimeout({
+   console.log('ABC');
+ }, 0);
+ Promise.resolve()
+   .then(() => {
+     console.log('XYZ');
+   })
+ 
+ console.log('PQR')
+}
+ 
+ 
+PQR
+xyz
+ABC
+ 
+ 
+ 
+ 
+ 
+for(let i = 0; i < 5; i++) {
+	
+setTimeout({
+   	console.log(i);
+ 	}, 0);
+}
+ 
+5
+5
+5
+ 
+ 
+0
+1
+2
+3
+ 
+ 
+ 
+ 
+ 
+

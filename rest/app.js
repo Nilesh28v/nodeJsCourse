@@ -2,12 +2,13 @@ const express=require('express')
 const app = express()
 const mongoose= require('mongoose')
 const bodyparser=require('body-parser')
+const cookieParser=require('cookie-parser')
 
 app.use(bodyparser.json()); //this middleware will run every time
 //import routes
 
 const  postsRoute= require('./routes/post')
-
+app.use(cookieParser())
 app.use('/posts',postsRoute)
 
 

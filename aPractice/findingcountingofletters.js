@@ -6,7 +6,7 @@ for(var i=0;i<b;i++){
     var c=a[i]
     var rgxp=new RegExp(c,"g");  
     console.log(rgxp); 
-    var value=`${c}}  : ${a.match(rgxp).length}`
+    var value=`${c}  : ${a.match(rgxp).length}`
     d.push(value)
 }
 var d=[...new Set(d)]
